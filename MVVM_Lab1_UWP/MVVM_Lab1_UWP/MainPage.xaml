@@ -30,6 +30,7 @@
         <StackPanel Grid.Column="2" Orientation="Vertical" Visibility="{x:Bind Organization.SelectedPerson, Mode=OneWay, Converter={StaticResource ObjectExistsToVisible}}" >
             <TextBox Text="{x:Bind Organization.SelectedPerson.Name, Mode=TwoWay, FallbackValue=''}" Margin="5" />
             <TextBox Text="{x:Bind Organization.SelectedPerson.Age, Mode=TwoWay, FallbackValue='0'}" Margin="5" />
+            <TextBox Text="{x:Bind Organization.SelectedPerson.Address, Mode=TwoWay, FallbackValue='0'}" Margin="5" />
             <Button Content="Delete" Click="{x:Bind Organization.Delete}" Margin="5" />
         </StackPanel>
     </Grid>

@@ -16,5 +16,10 @@ namespace MVVM_Lab1_UWP.ViewModels
             get { return This.Age; }
             set { SetProperty(This.Age, value, () => This.Age = value); }
         }
+        public String Address
+        {
+            get { return This.Address; }
+            set { SetProperty(This.Address, value, () => This.Address = value); }
+        }
     }
 }
