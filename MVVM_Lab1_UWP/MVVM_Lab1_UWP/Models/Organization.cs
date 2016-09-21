@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Lab1.Data;
+using MVVM_Lab1_UWP.Data;
 
-namespace Lab1.Models
+namespace MVVM_Lab1_UWP.Models
 {
     public class Organization
     {

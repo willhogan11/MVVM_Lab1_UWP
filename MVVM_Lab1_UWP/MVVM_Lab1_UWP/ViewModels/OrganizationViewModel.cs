@@ -1,10 +1,9 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Collections.ObjectModel;
-using Lab1.Models;
-using System;
-using Lab1.ViewModels;
+using MVVM_Lab1_UWP.Models;
 
-namespace ViewModels
+namespace MVVM_Lab1_UWP.ViewModels
 {
     public class OrganizationViewModel : NotificationBase
     {
@@ -23,8 +22,7 @@ namespace ViewModels
             }
         }
 
-        ObservableCollection<PersonViewModel> _People
-           = new ObservableCollection<PersonViewModel>();
+        ObservableCollection<PersonViewModel> _People = new ObservableCollection<PersonViewModel>();
         public ObservableCollection<PersonViewModel> People
         {
             get { return _People; }
@@ -41,11 +39,7 @@ namespace ViewModels
         public int SelectedIndex
         {
             get { return _SelectedIndex; }
-            set
-            {
-                if (SetProperty(ref _SelectedIndex, value))
-                { RaisePropertyChanged(nameof(SelectedPerson)); }
-            }
+            set { if (SetProperty(ref _SelectedIndex, value)) { RaisePropertyChanged(nameof(SelectedPerson)); } }
         }
 
         public PersonViewModel SelectedPerson

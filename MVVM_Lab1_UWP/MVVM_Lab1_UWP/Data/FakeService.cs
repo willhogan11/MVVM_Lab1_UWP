@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace Lab1.Data
+namespace MVVM_Lab1_UWP.Data
 {
     public class Person
     {
@@ -12,17 +12,17 @@ namespace Lab1.Data
 
     public class FakeService
     {
-        public static String Name = "Fake Data Service";
+        public static String Name = "Fake Data Service.";
 
         public static List<Person> GetPeople()
         {
-            Debug.WriteLine("GET for People");
+            Debug.WriteLine("GET for people.");
             return new List<Person>()
-            {
-                new Person() { Name="Chris Cole", Age = 10 },
-                new Person() { Name="Kelly Kale", Age=32 },
-                new Person() { Name="Dylan Durbin", Age=18 }
-            };
+                {
+                    new Person() { Name="Chris Cole", Age=10 },
+                    new Person() { Name="Kelly Kale", Age=32 },
+                    new Person() { Name="Dylan Durbin", Age=18 }
+                };
         }
 
         public static void Write(Person person)

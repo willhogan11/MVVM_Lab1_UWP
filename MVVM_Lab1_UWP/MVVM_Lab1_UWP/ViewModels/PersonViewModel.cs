@@ -1,23 +1,16 @@
-﻿using Lab1.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ViewModels;
+﻿using System;
+using MVVM_Lab1_UWP.Data;
 
-namespace Lab1.ViewModels
+namespace MVVM_Lab1_UWP.ViewModels
 {
     public class PersonViewModel : NotificationBase<Person>
     {
         public PersonViewModel(Person person = null) : base(person) { }
-
         public String Name
         {
             get { return This.Name; }
             set { SetProperty(This.Name, value, () => This.Name = value); }
         }
-
         public int Age
         {
             get { return This.Age; }
